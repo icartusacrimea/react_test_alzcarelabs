@@ -11,12 +11,15 @@ class ImagesList extends Component {
 		let source = `https://farm${tagData.farm}.staticflickr.com/${tagData.server}/${tagData.id}_${tagData.secret}.jpg`
 			return (
 				<li>
-					<img src={source} alt={tagData.title} className="eachImage" />
+					<a href={source} target="_blank">
+						<img src={source} alt={tagData.title} className="eachImage" />
+					</a>
 				</li>
 			);
 	}
 	render() {
 		let allImages = this.props.images;
+		console.log(allImages[0]);
 		return (
 			<div className="container">
 				<ul>
