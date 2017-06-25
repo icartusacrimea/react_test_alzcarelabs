@@ -23,7 +23,7 @@ class ImagesList extends Component {
 					{(allImages.length > 0) ?
 						allImages[0].map(this.renderImages)
 						:
-						<li>Search for an image category.</li>
+						<div className="instructions">Retrieve Flickr images tagged with your search keyword(s).</div>
 					}
 				</ul>
 			</div>
